@@ -1,6 +1,6 @@
 'use strict';
 
-class IsOnFilter {
+class IsOffFilter {
 
   constructor(flipperService) {
     this._flipperService = flipperService;
@@ -10,6 +10,11 @@ class IsOnFilter {
 
   filter(flipperName) {
     return this._flipperService.isOff(flipperName);
+  }
+
+
+  static create() {
+    return ['flipperService', IsOffFilter];
   }
 
 }

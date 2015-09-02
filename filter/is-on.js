@@ -12,6 +12,11 @@ class IsOnFilter {
     return this._flipperService.isOn(flipperName);
   }
 
+
+  static create() {
+    return ['flipperService', IsOnFilter];
+  }
+
 }
 
 module.exports = IsOnFilter;
