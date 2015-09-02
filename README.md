@@ -10,10 +10,12 @@ Usage
 ---------
 
     require('angular-suite-flipper')(angular);
-    angular.module('your-app', [
-      'suiteFlipper'
-    ]);
-
+    
+    var myApp = angular
+      .module('your-app', ['suiteFlipper'])
+      .config(['flipperProvider', (flipperProvider) => {
+        flipperProvider.setFlippers(['dummy', 'otherDummy']);
+      }]);
 
 Service
 ---------
@@ -21,6 +23,14 @@ Service
     myApp.controller('GreetingController', ['$scope', 'flipper', function($scope, flipper) {
       $scope.reload = function() {
         if (flipper.isOn('yourFlipperName')) {
+          // do something
+        } else {
+          // do something else
+        }
+      };
+      
+      $scope.someThing = function() {
+        if (flipper.isOff('yourFlipperName')) {
           // do something
         } else {
           // do something else
