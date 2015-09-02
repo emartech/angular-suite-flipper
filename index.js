@@ -8,9 +8,9 @@ const SuiteFlipper = require('suite-flipper-js');
 module.exports = function(angular) {
   angular
     .module(MODULE_NAME, [])
-    .filter('isOn', IsOnFilter.create())
-    .filter('isOff', IsOffFilter.create())
-    .provider('flipperService', function() {
+    .filter('flipperIsOn', IsOnFilter.create())
+    .filter('flipperIsOff', IsOffFilter.create())
+    .provider('flipper', function() {
       let flippers = [];
       this.setFlippers = function(value) { flippers = value; };
       this.$get = [function() {

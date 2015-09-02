@@ -19,4 +19,4 @@ class IsOffFilter {
 
 }
 
-module.exports = IsOnFilter;
+module.exports = IsOffFilter;
