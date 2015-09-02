@@ -14,7 +14,9 @@ class IsOffFilter {
 
 
   static create() {
-    return ['flipperService', IsOffFilter];
+    return ['flipper', (flipper) => {
+      return (new IsOffFilter(flipper)).filter;
+    }];
   }
 
 }

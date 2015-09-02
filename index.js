@@ -10,12 +10,17 @@ module.exports = function(angular) {
     .module(MODULE_NAME, [])
     .filter('flipperIsOn', IsOnFilter.create())
     .filter('flipperIsOff', IsOffFilter.create())
-    .provider('flipperService', function() {
+    .provider('flipper', function() {
       let flippers = [];
-      this.setFlippers = function(value) { flippers = value; };
-      this.$get = [function() {
-        return new SuiteFlipper(flippers);
-      }];
+      return {
+        setFlippers: function(value) {
+          flippers = value;
+        },
+
+        $get: [function() {
+          return new SuiteFlipper(flippers);
+        }]
+      };
     });
 
   return MODULE_NAME;
