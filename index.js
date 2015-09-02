@@ -10,7 +10,7 @@ module.exports = function(angular) {
     .module(MODULE_NAME, [])
     .filter('flipperIsOn', IsOnFilter.create())
     .filter('flipperIsOff', IsOffFilter.create())
-    .provider('flipper', function() {
+    .provider('flipperService', function() {
       let flippers = [];
       this.setFlippers = function(value) { flippers = value; };
       this.$get = [function() {
