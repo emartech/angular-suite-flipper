@@ -1,0 +1,31 @@
+{
+  "name": "angular-suite-flipper",
+  "version": "1.0.0",
+  "description": "Angular Suite Flipper",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emartech/angular-suite-flipper.git"
+  },
+  "author": "Viktor Somodi <viktor.somodi@emarsys.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emartech/angular-suite-flipper/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "lodash": "^3.10.1",
+    "mocha": "^2.2.5",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
+  },
+  "homepage": "https://github.com/emartech/angular-suite-flipper"
+}
