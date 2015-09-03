@@ -14,7 +14,7 @@ class IsOnFilter {
 
 
   static create() {
-    return ['flipper', (flipper) => {
+    return ['flipper', function(flipper) {
       return (new IsOnFilter(flipper)).filter;
     }];
   }

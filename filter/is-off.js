@@ -14,7 +14,7 @@ class IsOffFilter {
 
 
   static create() {
-    return ['flipper', (flipper) => {
+    return ['flipper', function(flipper) {
       return (new IsOffFilter(flipper)).filter;
     }];
   }
