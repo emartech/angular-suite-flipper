@@ -3,46 +3,54 @@
 Install
 ---------
 
-    npm install --save angular-suite-flipper
-    
-    
+```bash
+npm install --save angular-suite-flipper
+```
+
 Usage
 ---------
 
-    require('angular-suite-flipper')(angular);
-    
-    var myApp = angular
-      .module('your-app', ['suiteFlipper'])
-      .config(['flipperProvider', (flipperProvider) => {
-        flipperProvider.setFlippers(['dummy', 'otherDummy']);
-      }]);
+```javascript
+require('angular-suite-flipper')(angular);
+
+var myApp = angular
+  .module('your-app', ['suiteFlipper'])
+  .config(['flipperProvider', (flipperProvider) => {
+    flipperProvider.setFlippers(['dummy', 'otherDummy']);
+  }]);
+```
 
 Service
 ---------
-  
-    myApp.controller('GreetingController', ['$scope', 'flipper', function($scope, flipper) {
-      $scope.reload = function() {
-        if (flipper.isOn('yourFlipperName')) {
-          // do something
-        } else {
-          // do something else
-        }
-      };
-      
-      $scope.someThing = function() {
-        if (flipper.isOff('yourFlipperName')) {
-          // do something
-        } else {
-          // do something else
-        }
-      };
-    }]);
+
+```javascript
+myApp.controller('GreetingController', ['$scope', 'flipper', function($scope, flipper) {
+  $scope.reload = function() {
+    if (flipper.isOn('yourFlipperName')) {
+      // do something
+    } else {
+      // do something else
+    }
+  };
+
+  $scope.someThing = function() {
+    if (flipper.isOff('yourFlipperName')) {
+      // do something
+    } else {
+      // do something else
+    }
+  };
+}]);
+```
 
 Filter
 ---------
 
-    .div(ng-show="{{ 'self_service_dashboard_ignore_revenue' | flipperIsOn }}")
-      | flipper is On
-      
-    .div(ng-show="{{ 'self_service_dashboard_ignore_revenue' | flipperIsOff }}")
-      | flipper is Off
+```javascript
+.div(ng-show="{{ 'self_service_dashboard_ignore_revenue' | flipperIsOn }}")
+  | flipper is On
+
+.div(ng-show="{{ 'self_service_dashboard_ignore_revenue' | flipperIsOff }}")
+  | flipper is Off
+```
+
