@@ -3,11 +3,6 @@
   "version": "1.0.4",
   "description": "Angular Suite Flipper",
   "main": "index.js",
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
   "scripts": {
     "test": "mocha test"
   },
@@ -29,6 +24,6 @@
   },
   "homepage": "https://github.com/emartech/angular-suite-flipper",
   "dependencies": {
-    "suite-flipper-js": "1.0.2"
+    "suite-flipper-js": "1.0.4"
   }
 }
