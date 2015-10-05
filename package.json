@@ -1,6 +1,6 @@
 {
   "name": "angular-suite-flipper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Angular Suite Flipper",
   "main": "dist/index.js",
   "scripts": {
@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "angular": "^1.4.5",
+    "angular-mocks": "^1.4.5",
     "chai": "^3.2.0",
     "lodash": "^3.10.1",
     "mocha": "^2.2.5",
