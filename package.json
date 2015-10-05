@@ -1,6 +1,6 @@
 {
   "name": "angular-suite-flipper",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Angular Suite Flipper",
   "main": "dist/index.js",
   "scripts": {
