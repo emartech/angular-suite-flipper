@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/emartech/angular-suite-flipper",
   "dependencies": {
-    "suite-flipper-js": "1.0.4"
+    "suite-flipper-js": "1.0.5"
   }
 }
