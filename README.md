@@ -1,4 +1,4 @@
-# angular-suite-flipper
+# Angular Suite Flipper
 
 Install
 ---------
