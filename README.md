@@ -53,4 +53,3 @@ Filter
 .div(ng-show="{{ 'self_service_dashboard_ignore_revenue' | flipperIsOff }}")
   | flipper is Off
 ```
-
