@@ -19,8 +19,6 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
-    "angular": "^1.4.5",
-    "angular-mocks": "^1.4.5",
     "chai": "^3.2.0",
     "lodash": "^3.10.1",
     "mocha": "^2.2.5",
