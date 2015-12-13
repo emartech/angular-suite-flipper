@@ -4,7 +4,7 @@
   "description": "Angular Suite Flipper",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha $(find lib -name \"*.spec.js\")",
+    "test": "mocha $(find lib -name \"*.spec.js\") --compilers js:babel-register",
     "build": "rm -rf dist/* && babel lib --ignore *.spec.js --out-dir dist --source-maps",
     "prepublish": "npm test && npm run build"
   },
@@ -27,12 +27,13 @@
     "babel-preset-stage-1": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "babel-preset-stage-3": "^6.3.13",
+    "babel-register": "^6.3.13",
     "chai": "^3.4.1",
     "mocha": "^2.3.4"
   },
   "homepage": "https://github.com/emartech/angular-suite-flipper",
   "dependencies": {
-    "ng1-decorators": "^1.0.0",
+    "ng1-decorators": "^1.0.2",
     "suite-flipper-js": "1.0.5"
   }
 }
