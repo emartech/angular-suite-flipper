@@ -1,18 +1,23 @@
 {
   "name": "angular-suite-flipper",
-  "version": "2.0.2",
   "description": "Angular Suite Flipper",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha $(find lib -name \"*.spec.js\") --compilers js:babel-register",
     "build": "rm -rf dist/* && babel lib --ignore *.spec.js --out-dir dist --source-maps",
-    "prepublish": "npm test && npm run build"
+    "prepublish": "npm test && npm run build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "release": {
+    "verifyConditions": {
+      "path": "./node_modules/semantic-release/dist/lib/plugin-noop.js"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/emartech/angular-suite-flipper.git"
+    "url": "git+https://github.com/emartech/angular-suite-flipper.git"
   },
-  "author": "Viktor Somodi <viktor.somodi@emarsys.com>",
+  "author": "Emartech",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/emartech/angular-suite-flipper/issues"
@@ -29,11 +34,12 @@
     "babel-preset-stage-3": "^6.3.13",
     "babel-register": "^6.3.13",
     "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "semantic-release": "4.3.5"
   },
   "homepage": "https://github.com/emartech/angular-suite-flipper",
   "dependencies": {
     "ng1-decorators": "1.0.4",
-    "suite-flipper-js": "1.0.5"
+    "suite-flipper-js": "2.0.1"
   }
 }
